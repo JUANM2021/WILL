@@ -13,8 +13,20 @@ function numeroSimetrico(num) {
   // numeroSimetrico(11711) devuelve true
 
   // Tu código:
+  var tam = Array.from(num+'').length
+  var arr = Array.from(num+'')
+  var con = 0;
 
+  for (let i = 0; i < tam; i++) {
+    if (arr[i] === arr[(tam-1) - i]) con++;
+  }
+
+  if (con === tam) return true
+  else return false
+  
 }
+
+console.log(numeroSimetrico(1171))
 
 // No modifiques nada debajo de esta linea //
 
